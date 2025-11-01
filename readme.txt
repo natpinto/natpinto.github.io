@@ -6,7 +6,7 @@ This site showcases my projects, case studies, and experience as an **Informatic
 ---
 
 ##  Live Site
- [https://natpinto.github.io](https://natpinto.github.io)
+https://natpinto.github.io/
 
 ---
 
