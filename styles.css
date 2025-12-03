@@ -84,21 +84,16 @@ nav a:hover {
 
 /*Image Styling*/
 
-.project1_img img {
-  max-width: 80%;            
-  height: auto;             
-  border-radius: 12px;       
-  margin-bottom: 1rem;      
+/* Project images on the home page */
+.project1_img img,
+.project2_img img {
+  max-width: 100%;      
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.project2_img img {
-  max-width: 100%;            
-  height: auto;             
-  border-radius: 12px;       
-  margin-bottom: 1rem;      
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
 
 
 
@@ -235,3 +230,15 @@ nav a:hover {
     max-width: 200px;      
   }
 }
+
+/* Project card images on home page */
+.project-card img {
+  max-width: 320px;      /* controls size */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  border-radius: 12px;
+}
+
