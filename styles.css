@@ -4,6 +4,12 @@
   --maxw: 1100px;
 }
 
+.github-link {
+  font-size: 0.85rem;
+  margin: 1.5rem;
+
+}
+
 section:first-of-type {
   border-top: none;
 }
@@ -243,3 +249,9 @@ nav a:hover {
   border-radius: 12px;
 }
 
+.tech-stack {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 1rem;
+  margin: 1.5rem;
+}
