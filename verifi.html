@@ -18,6 +18,15 @@
     </div>
   </header>
 
+  <nav class="section-nav" id="sectionNav" aria-label="Case study sections">
+    <a href="#problem">Problem</a>
+    <a href="#role">Role</a>
+    <a href="#research">Research</a>
+    <a href="#solution">Solution</a>
+    <a href="#designs">Designs</a>
+    <a href="#reflection">Reflection</a>
+  </nav>
+
   <div class="case-hero">
     <h5>UX/UI Design</h5>
     <h2>Verifi</h2>
@@ -36,7 +45,7 @@
 
   <div class="case-body">
 
-    <section>
+    <section id="problem">
       <h5>Problem</h5>
       <h2>Information Overload and Unclear Credibility</h2>
       <p>
@@ -53,7 +62,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="role">
       <h5>My Contribution</h5>
       <h2>My Role & Responsibilities</h2>
       <p>I collaborated on a team of six designers. My responsibilities included:</p>
@@ -65,7 +74,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="research">
       <h5>Research</h5>
       <h2>Research Insights</h2>
       <ul>
@@ -76,7 +85,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="solution">
       <h5>Solution</h5>
       <h2>A Simple, Trust-Centered Interface</h2>
       <p>
@@ -104,7 +113,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="designs">
       <h5>Final Designs</h5>
       <h2>High-Fidelity Mockups</h2>
       <p>
@@ -116,7 +125,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="reflection">
       <h5>Learnings</h5>
       <h2>Reflection</h2>
       <p>
@@ -142,5 +151,33 @@
     <p>© 2025 Natalie Pinto</p>
   </footer>
 
+  <script>
+    (function () {
+      var nav = document.getElementById('sectionNav');
+      var links = nav.querySelectorAll('a');
+      var sections = Array.prototype.map.call(links, function (a) {
+        return document.querySelector(a.getAttribute('href'));
+      });
+      var body = document.querySelector('.case-body');
+
+      function update() {
+        var y = window.scrollY + 140;
+        var current = null;
+        sections.forEach(function (s, i) {
+          if (s && s.offsetTop <= y) current = i;
+        });
+        links.forEach(function (a, i) {
+          a.classList.toggle('active', i === current);
+        });
+        var bodyTop = body.offsetTop - 200;
+        var bodyBottom = body.offsetTop + body.offsetHeight - 200;
+        nav.classList.toggle('visible', window.scrollY > bodyTop && window.scrollY < bodyBottom);
+      }
+
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+  </script>
 </body>
 </html>

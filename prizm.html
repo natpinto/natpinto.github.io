@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Prizm Consulting – Case Study | Natalie Pinto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="m-0">Natalie Pinto</h1>
+      <nav>
+        <a href="index.html">← Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Case study hero -->
+  <div class="case-hero-split">
+    <div class="case-hero-text">
+      <h5>UX/UI Design &amp; Front-End Development</h5>
+      <h2>Prizm Consulting</h2>
+      <p>
+        A ground-up redesign and hand-built rebuild of a civil engineering firm's website —
+        from a usability study on their existing site through a functioning, deployable
+        six-page prototype, as the sole design and development intern working directly
+        with the owner.
+      </p>
+    </div>
+    <div class="case-hero-images">
+      <figure class="hero-fig">
+        <div class="hero-frame hero-frame--zoom">
+          <img src="images/PrizmHero.PNG" alt="Prizm Consulting homepage preview" onerror="this.closest('figure').style.display='none'">
+        </div>
+        <figcaption>Redesigned home page</figcaption>
+      </figure>
+      <figure class="hero-fig">
+        <div class="hero-frame">
+          <img src="images/PrizmProjects.PNG" alt="Prizm Consulting 'Who We Serve' section" onerror="this.closest('figure').style.display='none'">
+        </div>
+        <figcaption>Redesigned projects page</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <nav class="section-nav" id="sectionNav" aria-label="Case study sections">
+    <a href="#overview">Overview</a>
+    <a href="#problem">Problem</a>
+    <a href="#discovery">Discovery</a>
+    <a href="#research">Research</a>
+    <a href="#findings">Findings</a>
+    <a href="#strategy">Strategy</a>
+    <a href="#design">Design</a>
+    <a href="#iteration">Iteration</a>
+    <a href="#solution">Solution</a>
+    <a href="#validation">Validation</a>
+    <a href="#outcomes">Outcomes</a>
+  </nav>
+
+  <div class="case-body">
+
+    <section id="overview">
+      <h5>Overview</h5>
+      <h2>Role, Timeline &amp; Responsibilities</h2>
+      <p>
+        Prizm Consulting is a small civil engineering firm in Bellevue, WA. Their site was outdated,
+        thin on content, and didn't reflect the quality of their work. I redesigned and hand-built a
+        new six-page site end-to-end, from usability research on the existing site through a
+        functioning, deployable prototype.
+      </p>
+      <div class="split-cols">
+        <div>
+          <h5>Role</h5>
+          <p>UX/UI Designer &amp; Front-End Developer — sole intern on the project, working directly with the owner.</p>
+          <h5 style="margin-top:1.5rem;">Timeline</h5>
+          <p>Summer internship, transitioning into an ongoing part-time engagement.</p>
+        </div>
+        <div>
+          <h5>What I did</h5>
+          <ul>
+            <li>Ran a usability study on the existing site to identify real gaps before redesigning anything</li>
+            <li>Synthesized findings into a small set of design priorities</li>
+            <li>Designed and hand-coded six responsive pages (Home, About, Services, Projects, Careers, Contact) in HTML/CSS/JS</li>
+            <li>Built a functional swipeable testimonial carousel and other interactive components from scratch</li>
+            <li>Iterated through multiple stakeholder review rounds using the owner's own markup and feedback</li>
+            <li>Prepared the prototype for real usability testing (GitHub Pages) and a production deployment plan (Cloudflare)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem">
+      <h5>Problem</h5>
+      <h2>The Challenge</h2>
+      <p>
+        Prizm's existing site undersold the business. It listed services but gave visitors no evidence
+        of the firm's actual track record: no completed-project examples, no team information, and no
+        way to reach a person by phone.
+      </p>
+      <figure class="mockups" style="margin:2rem 0 0;">
+        <img src="images/PrizmOldSite.PNG" alt="Prizm's original website homepage before the redesign" onerror="this.parentElement.style.display='none'">
+        <figcaption style="font-family:'DM Sans',sans-serif; font-size:0.75rem; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted); margin-top:0.6rem;">Prizm's original site</figcaption>
+      </figure>
+      <h5 style="margin-top:2rem;">Business Goals</h5>
+      <ul>
+        <li>Give prospective public and private clients enough evidence of past work to build confidence before they reach out</li>
+        <li>Present Prizm as an established, credible firm without losing its small, approachable, people-first culture</li>
+        <li>Support recruiting by giving job candidates a real sense of the team and day-to-day culture</li>
+        <li>Move off a template builder (Squarespace) to a custom-built site the owner could keep editing and extending</li>
+      </ul>
+    </section>
+
+    <section id="discovery">
+      <h5>Discovery</h5>
+      <h2>Competitive Analysis</h2>
+      <p>
+        I reviewed four comparable engineering firms to see what they do well and where Prizm had
+        room to stand out.
+      </p>
+
+      <div class="comp-head">
+        <span>Competitor</span><span>What works</span><span>Opportunity for Prizm</span>
+      </div>
+
+      <div class="comp-row">
+        <div class="comp-name">Insight Engineering</div>
+        <p>Clear homepage messaging and straightforward service descriptions</p>
+        <p class="comp-opp">Communicate Prizm's services and value proposition more clearly</p>
+      </div>
+      <div class="comp-row">
+        <div class="comp-name">Navix Engineering</div>
+        <p>Intuitive navigation and streamlined contact experience</p>
+        <p class="comp-opp">Create a clear, accessible path for potential clients to get in touch</p>
+      </div>
+      <div class="comp-row">
+        <div class="comp-name">D.R. Strong</div>
+        <p>Prominent calls to action throughout the website</p>
+        <p class="comp-opp">Establish a clear primary CTA without overwhelming users</p>
+      </div>
+      <div class="comp-row">
+        <div class="comp-name">Kimley-Horn</div>
+        <p>Strong credibility through project showcases and company expertise</p>
+        <p class="comp-opp">Highlight completed projects, client testimonials, and team expertise</p>
+      </div>
+
+      <div class="comp-takeaway">
+        <span class="stat-label">Key takeaway</span>
+        <p>The analysis revealed opportunities to <strong>strengthen Prizm's credibility, improve content clarity, and create more intuitive user pathways</strong> while keeping the site simple and easy to navigate.</p>
+      </div>
+    </section>
+
+    <section id="research">
+      <h5>Research</h5>
+      <h2>Baseline Usability Study</h2>
+      <p>
+        Before redesigning anything, I tested Prizm's existing live site with 6 current and past
+        clients, the actual audience the redesign needed to serve. I moderated the session
+        live over Zoom as participants completed realistic tasks, then collected survey ratings and
+        open-ended feedback. With a small sample, I treated the results as directional rather than definitive.
+      </p>
+
+      <span class="stat-label">What was working</span>
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-value">5.0<span>/5</span></div>
+          <p class="stat-name">Navigation</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">5.0<span>/5</span></div>
+          <p class="stat-name">Professional appearance</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">4.67<span>/5</span></div>
+          <p class="stat-name">Understanding Prizm</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">4.33<span>/5</span></div>
+          <p class="stat-name">Trustworthiness</p>
+        </div>
+      </div>
+
+      <span class="stat-label">Biggest opportunity</span>
+      <div class="stat-grid">
+        <div class="stat-card stat-card--flag">
+          <div class="stat-value">3.67<span>/5</span></div>
+          <p class="stat-name">Finding desired information</p>
+        </div>
+      </div>
+
+      <p class="stat-callout">Navigation wasn't the problem. Content depth was.</p>
+    </section>
+
+    <section id="findings">
+      <h5>Findings</h5>
+      <h2>What I Learned</h2>
+      <p>
+        I organized usability testing feedback into five recurring themes to identify patterns in user
+        needs, frustrations, and opportunities for improvement.
+      </p>
+
+      <div class="affinity-board">
+        <div class="aff-purple">
+          <svg class="affinity-col-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2 12h20"/></svg>
+          <p class="affinity-col-title">Projects &amp; Experience</p>
+          <div class="affinity-col-rule"></div>
+          <div class="affinity-notes">
+            <div class="affinity-note">Wanted examples of completed projects</div>
+            <div class="affinity-note">Requested more details about previous projects</div>
+            <div class="affinity-note">Wanted project examples for individual services</div>          </div>
+        </div>
+
+        <div class="aff-orange">
+          <svg class="affinity-col-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/><path d="m9 12 2 2 4-4"/></svg>
+          <p class="affinity-col-title">Trust &amp; Credibility</p>
+          <div class="affinity-col-rule"></div>
+          <div class="affinity-notes">
+            <div class="affinity-note">Requested client testimonials</div>
+            <div class="affinity-note">Wanted more information about team members and their roles</div>
+            <div class="affinity-note">Requested information about Prizm's history or mission</div>          </div>
+        </div>
+
+        <div class="aff-green">
+          <svg class="affinity-col-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          <p class="affinity-col-title">Services &amp; Understanding</p>
+          <div class="affinity-col-rule"></div>
+          <div class="affinity-notes">
+            <div class="affinity-note">Participants identified Prizm's engineering, design, and planning services</div>
+            <div class="affinity-note">Wanted to click individual services to learn more</div>
+            <div class="affinity-note">Requested more detail about services offered or coordinated</div>
+            <div class="affinity-note">One participant questioned the order of planning and design</div>
+          </div>
+        </div>
+
+        <div class="aff-pink">
+          <svg class="affinity-col-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2"/><circle cx="18" cy="8" r="3"/><path d="M22 21v-1.5a3.5 3.5 0 0 0-2.5-3.35"/></svg>
+          <p class="affinity-col-title">Careers &amp; Culture</p>
+          <div class="affinity-col-rule"></div>
+          <div class="affinity-notes">
+            <div class="affinity-note">Requested information about company culture and office environment</div>
+            <div class="affinity-note">Wanted to know more about the people behind Prizm</div>
+            <div class="affinity-note">One participant felt the hiring content was too prominent</div>
+            <div class="affinity-note">One participant suggested displaying names when interacting with the team photo</div>
+          </div>
+        </div>
+
+        <div class="aff-blue">
+          <svg class="affinity-col-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          <p class="affinity-col-title">Website Usability</p>
+          <div class="affinity-col-rule"></div>
+          <div class="affinity-notes">
+            <div class="affinity-note">Appreciated the concise information and short website</div>
+            <div class="affinity-note">Requested a contact form</div>
+            <div class="affinity-note">Homepage content extended off-screen on a tablet</div>            <div class="affinity-note">Get in Touch opened a blank email draft, which one participant found intimidating</div>
+            <div class="affinity-note">Requested a phone number or more direct contact information</div>
+          </div>
+        </div>
+      </div>
+
+      <h5 style="margin-top:2rem;">Key Insights</h5>
+      <div class="table-responsive">
+        <table class="key-insights">
+          <thead>
+            <tr>
+              <th>Projects &amp; Experience</th>
+              <th>Trust &amp; Credibility</th>
+              <th>Services &amp; Understanding</th>
+              <th>Careers &amp; Culture</th>
+              <th>Navigation &amp; Accessibility</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Participants wanted more examples of past work to evaluate Prizm's capabilities.</td>
+              <td>Participants looked for testimonials, team information, and company background when evaluating Prizm.</td>
+              <td>Participants generally identified Prizm's services but wanted more detailed information and examples.</td>
+              <td>Participants wanted more insight into company culture and employees without an overly prominent recruiting message.</td>
+              <td>Participants valued concise content, but responsive layout issues and limited contact options created friction.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="strategy">
+      <h5>Strategy</h5>
+      <h2>Defining the Experience</h2>
+      <p>
+        Because the baseline study was task-based, I mapped the prospective client's journey rather than
+        building a persona from a small sample:
+      </p>
+      <p class="stat-callout" style="font-size:1.05rem;">Discover → Understand Services → Evaluate Experience → Build Trust → Contact</p>
+      <p style="margin-top:1.5rem;">
+        Each stage lined up with a specific gap from the research: services needed more depth to support
+        "Understand Services," a projects section was needed to support "Evaluate Experience," and
+        team/testimonial content was needed to support "Build Trust." The site grew from one page to
+        six top-level pages, kept deliberately simple since navigation was already a strength.
+      </p>
+    </section>
+
+    <section id="design">
+      <h5>From Research to Design</h5>
+      <h2>Finding → Decision</h2>
+
+      <div class="finding-decision">
+        <div><span class="fd-label">Finding</span><p>In my initial stakeholder meetings, I learned that serving both public and private sector clients is a core part of what Prizm does, but the original site never mentioned it.</p></div>
+        <div class="fd-arrow">→</div>
+        <div><span class="fd-label">Decision</span><p>Added a section to the home page highlighting Prizm's public and private sector work.</p></div>
+      </div>
+
+      <div class="finding-decision">
+        <div><span class="fd-label">Finding</span><p>Users wanted evidence of completed work.</p></div>
+        <div class="fd-arrow">→</div>
+        <div><span class="fd-label">Decision</span><p>Added Featured Projects to the homepage and built dedicated Public/Private project pages.</p></div>
+      </div>
+
+      <div class="finding-decision">
+        <div><span class="fd-label">Finding</span><p>Users wanted more detail on individual services.</p></div>
+        <div class="fd-arrow">→</div>
+        <div><span class="fd-label">Decision</span><p>Made service cards clickable, each with real jobsite photography.</p></div>
+      </div>
+
+      <div class="finding-decision">
+        <div><span class="fd-label">Finding</span><p>Users wanted to know the people behind Prizm.</p></div>
+        <div class="fd-arrow">→</div>
+        <div><span class="fd-label">Decision</span><p>Expanded the About page's team section and added Team Culture to Careers.</p></div>
+      </div>
+
+      <div class="finding-decision">
+        <div><span class="fd-label">Finding</span><p>Users wanted social proof and more trust signals.</p></div>
+        <div class="fd-arrow">→</div>
+        <div><span class="fd-label">Decision</span><p>Built a real client testimonial carousel using quotes from actual clients.</p></div>
+      </div>
+
+      <div class="finding-decision">
+        <div><span class="fd-label">Finding</span><p>Users liked the site's simplicity and rated navigation 5.0/5.</p></div>
+        <div class="fd-arrow">→</div>
+        <div><span class="fd-label">Decision</span><p>Expanded the single-page site into six pages to make room for more content, while keeping navigation as simple as possible.</p></div>
+      </div>
+    </section>
+
+    <section id="iteration">
+      <h5>Iteration</h5>
+      <h2>Testing &amp; Iteration</h2>
+      <p>
+        The redesign wasn't a single hand-off — it went through several rounds of real stakeholder
+        feedback, delivered as markup on printed page annotations, then translated back into working code.
+      </p>
+      <ul>
+        <li>The testimonial carousel started as a static grid, then became a swipeable, page-based carousel (click, touch, and trackpad gesture support) after feedback that showing all quotes at once felt overwhelming</li>
+        <li>The Services page hero went through multiple visual treatments — including testing a background blur behind the jobsite photo — before settling on a full-bleed photo with a glass text panel for readability</li>
+        <li>The Careers page team photo collage was updated after feedback that one candid photo wasn't representative of the current team</li>
+        <li>Page sections were reordered to match the order established on the homepage, after a review round flagged the inconsistency</li>
+      </ul>
+      <p>
+        The prototype is now live for a round of client usability testing via GitHub Pages, kept out of
+        search results since it's still pre-launch, with the results feeding the next iteration before
+        production deployment on Cloudflare.
+      </p>
+    </section>
+
+    <section id="solution">
+      <h5>Final Solution</h5>
+      <h2>The Redesigned Site</h2>
+      <!-- TODO: drop real page screenshots into images/ using these filenames -->
+      <div class="page-cards">
+        <div class="page-card">
+          <div class="page-card-img"><img src="images/PrizmHome.PNG" alt="Prizm home page, final design" onerror="this.style.display='none'"></div>
+          <h4>Home</h4>
+          <p>Full-bleed photo hero, a real client testimonial carousel, and a Featured Projects section addressing the #1 research finding.</p>
+        </div>
+        <div class="page-card">
+          <div class="page-card-img"><img src="images/PrizmAbout.PNG" alt="Prizm about page, final design" onerror="this.style.display='none'"></div>
+          <h4>About</h4>
+          <p>An expanded team section and company story.</p>
+        </div>
+        <div class="page-card">
+          <div class="page-card-img"><img src="images/PrizmServices.PNG" alt="Prizm services page, final design" onerror="this.style.display='none'"></div>
+          <h4>Services</h4>
+          <p>Civil Engineering, Planning, and Site Design each get a full section with real jobsite photography instead of generic icons.</p>
+        </div>
+        <div class="page-card">
+          <div class="page-card-img"><img src="images/PrizmProjectsPage.PNG" alt="Prizm projects page, final design" onerror="this.style.display='none'"></div>
+          <h4>Projects</h4>
+          <p>Separate Public and Private sector carousels with real project photography, replacing a site that previously showed no completed work at all.</p>
+        </div>
+        <div class="page-card">
+          <div class="page-card-img"><img src="images/PrizmCareers.PNG" alt="Prizm careers page, final design" onerror="this.style.display='none'"></div>
+          <h4>Careers</h4>
+          <p>A Team Culture section with real candid office photos.</p>
+        </div>
+        <div class="page-card">
+          <div class="page-card-img"><img src="images/PrizmContact.PNG" alt="Prizm contact page, final design" onerror="this.style.display='none'"></div>
+          <h4>Contact</h4>
+          <p>Clearer, more task-specific calls to action.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="validation">
+      <h5>Design Validation</h5>
+      <h2>Validating the Redesign</h2>
+      <p>
+        After completing the high-fidelity redesign, I conducted a second round of usability testing
+        with 3 available returning participants, using similar tasks to evaluate changes in clarity,
+        navigation, and credibility.
+      </p>
+
+      <h5 style="margin-top:2rem;">What We Learned</h5>
+      <div class="impact-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="impact-card">
+          <strong>More Detailed Service Information</strong>
+          <p>Participants found the redesigned services page clear and no longer reported missing service information or project examples.</p>
+        </div>
+        <div class="impact-card">
+          <strong>Stronger Credibility</strong>
+          <p>Project examples and testimonials were highlighted as valuable additions.</p>
+        </div>
+        <div class="impact-card">
+          <strong>Intuitive Navigation</strong>
+          <p>Participants easily identified how to contact Prizm through the redesigned website.</p>
+        </div>
+        <div class="impact-card">
+          <strong>Professional Presentation</strong>
+          <p>Feedback highlighted the improved layout, clarity, and level of detail.</p>
+        </div>
+      </div>
+
+      <h5 style="margin-top:2rem;">In Their Words</h5>
+      <div class="quote-grid">
+        <figure class="quote-card">
+          <blockquote>“Giving project examples that you can drill down into and client testimonials.”</blockquote>
+          <figcaption>Participant feedback</figcaption>
+        </figure>
+        <figure class="quote-card">
+          <blockquote>“More professional, better layout, specifics.”</blockquote>
+          <figcaption>Participant feedback</figcaption>
+        </figure>
+      </div>
+
+      <h5 style="margin-top:2rem;">Opportunities for Refinement</h5>
+      <ul class="refine-list">
+        <li>Expand team biographies and professional experience.</li>
+        <li>Replace placeholder imagery and add more project examples.</li>
+        <li>Finalize contact details and update career information.</li>
+      </ul>
+
+      <div class="comp-takeaway">
+        <strong>Key Takeaway</strong>
+        <p>The follow-up study provided encouraging evidence that the redesign addressed initial concerns around content clarity and credibility, while revealing final refinements needed before launch.</p>
+      </div>
+    </section>
+
+    <section id="outcomes">
+      <h5>Outcomes</h5>
+      <h2>Impact &amp; Reflection</h2>
+      <p>
+        Putting the baseline and the redesign side by side shows how the experience changed, and whether
+        the gap in "finding desired information" (3.67/5) actually closed.
+      </p>
+
+      <div class="video-compare">
+        <figure class="before">
+          <!-- TODO: swap in the real baseline screen recording -->
+          <video controls muted playsinline preload="metadata" poster="images/PrizmOldSite.PNG">
+            <source src="images/PrizmSiteBefore.mov" type="video/mp4">
+          </video>
+          <figcaption>Before — existing site</figcaption>
+        </figure>
+        <figure class="after">
+          <!-- TODO: swap in the real redesign screen recording -->
+          <video controls muted playsinline preload="metadata" poster="images/PrizmHome.PNG">
+            <source src="images/PrizmSiteAfter.MOV" type="video/mp4">
+          </video>
+          <figcaption>After — redesigned prototype</figcaption>
+        </figure>
+      </div>
+
+      <!-- TODO: fill in with the real 2nd usability study numbers -->
+      <p class="stat-callout" style="font-size:1.05rem;">Finding desired information: 3.67/5 → 5/5</p>
+
+      <div class="impact-grid">
+        <div class="impact-card">
+          <strong>Research → Decisions</strong>
+          <p>Keeping a finding → decision pairing disciplined made stakeholder conversations much easier to have.</p>
+        </div>
+        <div class="impact-card">
+          <strong>Real Stakeholder, Real Language</strong>
+          <p>Feedback came as business priorities ("clients need to see we've done this before"), not UX terminology, so translating that into decisions was its own skill.</p>
+        </div>
+        <div class="impact-card">
+          <strong>Building It Myself</strong>
+          <p>Going past mockups into a real build forced constraints (responsive behavior, real photo assets, deployment) into the design process much earlier than a typical class project would.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="prototype-link">
+      <a href="https://natpinto.github.io/ux-prototype-02/" target="_blank" rel="noopener" class="btn-primary">View Prototype</a>
+      <a href="index.html#projects" class="btn-secondary">Other Projects</a>
+    </div>
+
+  </div><!-- /case-body -->
+
+  <footer>
+    <p>© 2025 Natalie Pinto</p>
+  </footer>
+
+  <script>
+    // Crop the bottom of the After clip so its box matches the Before clip's height
+    (function () {
+      var before = document.querySelector('.video-compare .before video');
+      var after = document.querySelector('.video-compare .after video');
+      if (!before || !after) return;
+      function sync() {
+        var h = before.getBoundingClientRect().height;
+        if (h > 0) after.style.height = h + 'px';
+      }
+      before.addEventListener('loadedmetadata', sync);
+      window.addEventListener('resize', sync);
+      window.addEventListener('load', sync);
+      sync();
+
+      // Autoplay both clips together, 1 second after the comparison scrolls into view (once)
+      var wrap = document.querySelector('.video-compare');
+      var timer = null;
+      var played = false;
+      function startBoth() {
+        before.muted = true;
+        after.muted = true;
+        before.playsInline = true;
+        after.playsInline = true;
+        var p1 = before.play();
+        var p2 = after.play();
+        Promise.all([p1, p2]).then(function () {
+          played = true;
+        }).catch(function (err) {
+          // Browser blocked autoplay (e.g. Safari with Low Power Mode or site auto-play set to Never).
+          // Stop retrying on scroll; play on the viewer's first click/tap/key instead if still in view.
+          blocked = true;
+          console.warn('Video autoplay blocked, will start on first interaction:', err);
+        });
+      }
+      var blocked = false;
+      function onGesture() {
+        if (played || !blocked) return;
+        var r = wrap.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) {
+          blocked = false;
+          startBoth();
+        }
+      }
+      ['pointerdown', 'keydown', 'touchstart'].forEach(function (ev) {
+        window.addEventListener(ev, onGesture, { passive: true });
+      });
+      function check() {
+        if (played || blocked) return;
+        var r = wrap.getBoundingClientRect();
+        var vh = window.innerHeight;
+        // visible when the top of the comparison is in the viewport and at least 40% of it is showing
+        var visible = Math.min(r.bottom, vh) - Math.max(r.top, 0);
+        var inView = r.top < vh * 0.75 && visible > Math.min(r.height * 0.4, vh * 0.3);
+        if (inView && !timer) {
+          timer = setTimeout(function () { timer = null; startBoth(); }, 1000);
+        } else if (!inView && timer) {
+          clearTimeout(timer);
+          timer = null;
+        }
+      }
+      window.addEventListener('scroll', check, { passive: true });
+      window.addEventListener('resize', check);
+      check();
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var nav = document.getElementById('sectionNav');
+      var links = nav.querySelectorAll('a');
+      var sections = Array.prototype.map.call(links, function (a) {
+        return document.querySelector(a.getAttribute('href'));
+      });
+      var body = document.querySelector('.case-body');
+
+      function update() {
+        var y = window.scrollY + 140;
+        var current = null;
+        sections.forEach(function (s, i) {
+          if (s && s.offsetTop <= y) current = i;
+        });
+        links.forEach(function (a, i) {
+          a.classList.toggle('active', i === current);
+        });
+        var bodyTop = body.offsetTop - 200;
+        var bodyBottom = body.offsetTop + body.offsetHeight - 200;
+        nav.classList.toggle('visible', window.scrollY > bodyTop && window.scrollY < bodyBottom);
+      }
+
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+  </script>
+</body>
+</html>

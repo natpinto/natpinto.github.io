@@ -18,6 +18,18 @@
     </div>
   </header>
 
+  <nav class="section-nav" id="sectionNav" aria-label="Case study sections">
+    <a href="#problem">Problem</a>
+    <a href="#role">Role</a>
+    <a href="#research">Research</a>
+    <a href="#insights">Insights</a>
+    <a href="#empathy">Empathy</a>
+    <a href="#ideation">Ideation</a>
+    <a href="#design">Design</a>
+    <a href="#impact">Impact</a>
+    <a href="#reflection">Reflection</a>
+  </nav>
+
   <!-- Case study hero -->
   <div class="case-hero">
     <h5>UX/UI Design</h5>
@@ -38,7 +50,7 @@
 
   <div class="case-body">
 
-    <section>
+    <section id="problem">
       <h5>Problem</h5>
       <h2>The Challenge of Concert Discovery</h2>
       <p>
@@ -55,7 +67,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="role">
       <h5>My Contribution</h5>
       <h2>My Role & Responsibilities</h2>
       <p>As one of the designers on a collaborative team, my responsibilities included:</p>
@@ -68,7 +80,7 @@
       </ul>
     </section>
 
-    <section>
+    <section id="research">
       <h5>Research</h5>
       <h2>Competitive Analysis</h2>
       <div class="compAnalysis">
@@ -81,7 +93,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="insights">
       <h5>Findings</h5>
       <h2>Key Insights</h2>
       <div class="table-responsive">
@@ -109,7 +121,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="empathy">
       <h5>Empathy</h5>
       <h2>Empathy Map</h2>
       <div class="empathyMap">
@@ -127,7 +139,7 @@
       </p>
     </section>
 
-    <section>
+    <section id="ideation">
       <h5>Ideation</h5>
       <h2>User Flows</h2>
       <p>
@@ -140,7 +152,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="design">
       <h5>Design</h5>
       <h2>Design Process</h2>
       <div class="wireframes" style="margin-bottom:2rem;">
@@ -151,7 +163,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="impact">
       <h5>Outcomes</h5>
       <h2>Impact</h2>
       <p>
@@ -175,7 +187,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="reflection">
       <h5>Learnings</h5>
       <h2>Reflection</h2>
       <p>
@@ -201,5 +213,33 @@
     <p>© 2025 Natalie Pinto</p>
   </footer>
 
+  <script>
+    (function () {
+      var nav = document.getElementById('sectionNav');
+      var links = nav.querySelectorAll('a');
+      var sections = Array.prototype.map.call(links, function (a) {
+        return document.querySelector(a.getAttribute('href'));
+      });
+      var body = document.querySelector('.case-body');
+
+      function update() {
+        var y = window.scrollY + 140;
+        var current = null;
+        sections.forEach(function (s, i) {
+          if (s && s.offsetTop <= y) current = i;
+        });
+        links.forEach(function (a, i) {
+          a.classList.toggle('active', i === current);
+        });
+        var bodyTop = body.offsetTop - 200;
+        var bodyBottom = body.offsetTop + body.offsetHeight - 200;
+        nav.classList.toggle('visible', window.scrollY > bodyTop && window.scrollY < bodyBottom);
+      }
+
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+  </script>
 </body>
 </html>
